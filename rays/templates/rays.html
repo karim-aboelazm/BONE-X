@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  Rays
+{% endblock title %}
+
+
+{% block body %}
+
+ <!-- our_ability part start-->
+ <section class="our_ability section_padding">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-md-6 col-lg-6">
+                <div class="our_ability_img">
+                    <img src="{% static '' %}img/ability_img.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-5">
+                <div class="our_ability_member_text">
+                    
+                    <h1 style="font-size: 50px; font-family: sans-serif; font-weight: bolder;padding-bottom:20px"><span style="border-bottom: 3px solid #619da3;">RAYS</span></h1>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="file" class="form-control" id="inputGroupFile02">
+                            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                        </div>
+                        <select class="form-select mb-3" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">Yes</option>
+                            <option value="2">No</option>
+                            <option value="3">I'n not Sure</option>
+                        </select>
+                        <div class="form-floating mb-3 mt-5">
+                            <label for="floatingInput">Tell Us Where is The Break ?</label>
+                            <input type="text" class="form-control" id="floatingInput">
+                        </div>
+                        <input type="submit" value="Send" class="btn btn-success btn-lg">
+                    </form>
+                    <style>
+                        
+                    </style>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- our_ability part end-->
+{% endblock body %}
+    

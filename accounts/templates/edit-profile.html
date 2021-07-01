@@ -1,0 +1,38 @@
+<!-- extends for inheritance -->
+{% extends 'base.html' %}
+  <!-- loading static for images and javascript file links  -->
+  {% load static %}
+  <!-- loading bootstrap4 for forms and buttons  -->
+  {% load bootstrap4 %}
+  <!-- Edit profile Page title  -->
+  {% block title %} Edit_Profile {% endblock title %}
+  <!-- Edit profile Page content  -->
+  {% block body %}
+    <!-- Edit profile Page container  -->
+    <div class="container">
+      <div class="edit">
+        {% include "content/edit_pro_continent.html" %}
+      </div>
+      <style>
+        .form-text
+        {
+          display:none;
+        }
+        .edit
+        {
+          margin-top: 15%;
+          margin-bottom: 15%;
+          border: 2px solid;
+          padding: 20px;
+        }
+      </style>
+    </div>
+
+    
+  {% endblock body %}
+
+
+
+
+
+    

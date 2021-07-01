@@ -1,0 +1,91 @@
+<!-- extends for inheritance -->
+{% extends "base.html" %}
+    <!-- loading static for images and javascript file links  -->
+    {% load static %}
+    <!-- Profile page title -->
+    {% block title %}Profile{% endblock title %}
+    <!-- Profile page content -->
+    {% block body %}
+    <div class="container">
+        <div class="card mx-auto" style="max-width: 850px;height: 450px; margin-top:20%; margin-bottom:10%">
+            <div class="row g-0 p-3">
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h3 class="card-title profile_title">Profile</h3>
+                  <ul class="profile_info">
+                    <li><div><span class="tag active activity-link active">Full Name : </span><span class="span_dec">{{profile.user.first_name}} {{profile.user.last_name}}</span></div></li>
+                    <li><div><span class="tag activity-link active">Email : </span><span class="span_dec">{{profile.user.email}}</span></div></li>
+                    {% if profile.phone_number %}
+                    <li><div><span class="tag activity-link active">Phone Num : </span><span class="span_dec">{{profile.phone_number}}</span></div></li>
+                    {% else %}
+                    <li><div><span class="tag activity-link active">Phone Num : </span><span>........</span></div></li>
+                    {% endif %}
+                    {% if profile.state and profile.city %}
+                    <li><div><span class="tag activity-link active">Address   : </span><span class="span_dec">{{profile.state|capfirst}} - {{profile.city}}</span></div></li>
+                    {% else %}
+                    <li><div><span class="tag activity-link active">Address   : </span><span>........</span></div></li>
+                    {% endif %}
+                   </ul>
+                  <a href="{% url 'accounts:edit_profile' %}" class="btn btn-success">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                      </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="discount img-fluid  user_img_container user_pic" style="">
+                {% if profile.image %}
+                <div class="user_img">
+                    <img src="{{profile.image.url}}" alt="This is The User Image .. " style="width: 280px;height: 280px;">
+                </div>
+                {% else %}
+                <div class="user_img">
+                    <img src="{% static 'img/defalt_profile.png' %}" alt="This is The User Image .. " style="width: 280px;height: 280px;">
+                </div>
+                {% endif %}
+        
+            </div>
+              
+            </div>
+            
+        </div>
+    </div>
+    <style>
+        .profile_title{
+            font-size: 40px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 500;
+            padding-bottom: 30px;
+            border-bottom:10px solid #013A40;
+        }
+        .profile_info 
+        {
+            margin: 10px;
+            font-size: 20px;
+            padding: 10px;
+        }
+        .profile_info li{
+            margin: 10px;
+            border-left: 20px solid #013A40;
+            padding-left: 12px;
+            font-weight: 600;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-bottom: 20px;
+        }
+        .img-fluid
+        {
+            margin-top: 120px;
+            
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+        }
+        .user_img img
+        {
+            border-radius: 50%;
+        }
+    </style>
+    
+    {% endblock body %}
+    

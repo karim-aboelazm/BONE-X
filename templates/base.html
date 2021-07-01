@@ -1,0 +1,11 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+    {% include "head.html" %}
+    <body>
+        {% include "nav_bar.html" %}
+        {% block body %}{% endblock body %}
+        {% include "footer.html" %}
+        {% include "script.html" %}   
+    </body>
+</html>

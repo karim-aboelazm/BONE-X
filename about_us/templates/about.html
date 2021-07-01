@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  About Us
+{% endblock title %}
+
+
+{% block body %}
+     
+
+    <!-- our_ability part start-->
+    <section class="our_ability section_padding">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-6 col-lg-6">
+                    <div class="our_ability_img">
+                        <img src="{% static '' %}img/docc.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-5">
+                    <div class="our_ability_member_text">
+                        
+                        <h1 style="font-size: 50px; font-family: sans-serif; font-weight: bolder;padding-bottom:20px">BO<span style="border-bottom: 3px solid #619da3;">NE</span> -X</h1>
+                        <p style="text-align: justify; font-size: 15px;">
+                            The objective is to build a machine learning model that can detect
+                            an abnormality in the X-Ray radiographs. These models can help towards
+                            providing healthcare access to the parts of the world where access to 
+                            skilled radiologists is limited. According to a study on the Global Burden 
+                            of Disease and the worldwide impact of all diseases found that, “musculoskeletal 
+                            conditions affect more than 1.7 billion people worldwide. They are the 2nd greatest 
+                            cause of disabilities, and have the 4th greatest impact on the overall health of
+                            the world population when considering both death and disabilities”.This project 
+                            attempts to implement deep neural network using DenseNet169 .
+                        </p>
+                        <ul>
+                            <li><span class="ti-mouse"></span>Modern Technology</li>
+                            <li><span class="ti-heart-broken"></span>Worldclass Facilities</li>
+                            <li><span class="ti-package"></span>Artificial intelligence</li>
+                            <li><span class="ti-headphone-alt"></span>24 Hours Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- our_ability part end-->
+
+    <!--::review_part start::-->
+    <section class="review_part">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12" style="display: flex;">
+                    <div class="card" style="width: 18rem; margin:20px">
+                        <img src="{% static 'img/amr.jpeg' %}" class="card-img-top" style="height: 300px;" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Amr Naser Elsayed</h5>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem; margin:20px">
+                        <img src="{% static 'img/kerolos.jpeg' %}" class="card-img-top" style="height: 300px;" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Keroles Ramses Henry</h5>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem; margin:20px">
+                        <img src="{% static 'img/micheal.jpeg' %}" class="card-img-top" style="height: 300px;" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Micheal Aziz Youssef</h5>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem; margin:20px">
+                        <img src="{% static 'img/mirna.jpeg' %}" class="card-img-top" style="height: 300px;" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Mirna Mohamed Samir</h5>
+                        </div>
+                    </div>  
+                </div>
+                <div class="col-lg-12" style="display: flex;">
+                    <div class="card" style="width: 18rem; margin:20px">
+                        <img src="{% static 'img/marwa.jpeg' %}" class="card-img-top" style="height: 300px;" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Marwa Farg Mohamed</h5>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem; margin:20px">
+                        <img src="{% static 'img/ebtihal.jpeg' %}" class="card-img-top" style="height: 300px;" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Ebtihal Sameh Eltaiby</h5>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem; margin:20px">
+                        <img src="{% static 'img/Mahmoud.jpeg' %}" class="card-img-top" style="height: 300px;" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Mahmoud Reda</h5>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+
+            </div>
+        </div>
+    </section>
+    <!--::review_part end::-->
+
+   
+   
+{% endblock body %}
+    
